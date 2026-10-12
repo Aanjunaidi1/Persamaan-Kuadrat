@@ -1,0 +1,2987 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Persamaan Kuadrat • Media Interaktif</title>
+    <style>
+      /* ===== BACKGROUND PARTIKEL ===== */
+      @keyframes move {
+        100% {
+          transform: translate3d(0, 0, 1px) rotate(360deg);
+        }
+      }
+      .bg-particles {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: #090d16;
+        overflow: hidden;
+        z-index: 0;
+      }
+      .bg-particles span {
+        width: 20vmin;
+        height: 20vmin;
+        border-radius: 20vmin;
+        backface-visibility: hidden;
+        position: absolute;
+        animation: move;
+        animation-duration: 45s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      .bg-particles span:nth-child(1) {
+        color: #fffafa;
+        top: 36%;
+        left: 63%;
+        animation-duration: 46s;
+        animation-delay: -29s;
+        transform-origin: -12vw 12vh;
+        box-shadow: 40vmin 0 5.8290239103854855vmin currentColor;
+      }
+      .bg-particles span:nth-child(2) {
+        color: #f18741;
+        top: 41%;
+        left: 21%;
+        animation-duration: 47s;
+        animation-delay: -16s;
+        transform-origin: -17vw -4vh;
+        box-shadow: 40vmin 0 5.101274809587564vmin currentColor;
+      }
+      .bg-particles span:nth-child(3) {
+        color: #f18741;
+        top: 92%;
+        left: 62%;
+        animation-duration: 6s;
+        animation-delay: -39s;
+        transform-origin: 4vw -10vh;
+        box-shadow: -40vmin 0 5.8830000802461955vmin currentColor;
+      }
+      .bg-particles span:nth-child(4) {
+        color: #fffafa;
+        top: 91%;
+        left: 88%;
+        animation-duration: 27s;
+        animation-delay: -23s;
+        transform-origin: 14vw -18vh;
+        box-shadow: 40vmin 0 5.822175490716475vmin currentColor;
+      }
+      .bg-particles span:nth-child(5) {
+        color: #fffafa;
+        top: 46%;
+        left: 93%;
+        animation-duration: 46s;
+        animation-delay: -1s;
+        transform-origin: -9vw -8vh;
+        box-shadow: -40vmin 0 5.72916751287406vmin currentColor;
+      }
+      .bg-particles span:nth-child(6) {
+        color: #fffafa;
+        top: 29%;
+        left: 73%;
+        animation-duration: 37s;
+        animation-delay: -45s;
+        transform-origin: -24vw 5vh;
+        box-shadow: 40vmin 0 5.6991005623816156vmin currentColor;
+      }
+      .bg-particles span:nth-child(7) {
+        color: #f18741;
+        top: 45%;
+        left: 17%;
+        animation-duration: 14s;
+        animation-delay: -15s;
+        transform-origin: -11vw -16vh;
+        box-shadow: 40vmin 0 5.512611995990265vmin currentColor;
+      }
+      .bg-particles span:nth-child(8) {
+        color: #5d00ff;
+        top: 92%;
+        left: 57%;
+        animation-duration: 53s;
+        animation-delay: -22s;
+        transform-origin: 24vw 20vh;
+        box-shadow: 40vmin 0 5.1981116321315435vmin currentColor;
+      }
+      .bg-particles span:nth-child(9) {
+        color: #f18741;
+        top: 38%;
+        left: 60%;
+        animation-duration: 6s;
+        animation-delay: -32s;
+        transform-origin: -18vw 25vh;
+        box-shadow: 40vmin 0 5.69057786666295vmin currentColor;
+      }
+      .bg-particles span:nth-child(10) {
+        color: #fffafa;
+        top: 4%;
+        left: 10%;
+        animation-duration: 9s;
+        animation-delay: -22s;
+        transform-origin: -15vw -21vh;
+        box-shadow: 40vmin 0 5.365857192311366vmin currentColor;
+      }
+      .bg-particles span:nth-child(11) {
+        color: #5d00ff;
+        top: 61%;
+        left: 52%;
+        animation-duration: 35s;
+        animation-delay: -22s;
+        transform-origin: 14vw -6vh;
+        box-shadow: 40vmin 0 5.639885140976319vmin currentColor;
+      }
+      .bg-particles span:nth-child(12) {
+        color: #f18741;
+        top: 41%;
+        left: 7%;
+        animation-duration: 41s;
+        animation-delay: -33s;
+        transform-origin: -8vw 12vh;
+        box-shadow: 40vmin 0 5.895071023078631vmin currentColor;
+      }
+      .bg-particles span:nth-child(13) {
+        color: #5d00ff;
+        top: 88%;
+        left: 5%;
+        animation-duration: 47s;
+        animation-delay: -13s;
+        transform-origin: -9vw -22vh;
+        box-shadow: 40vmin 0 5.323800421660335vmin currentColor;
+      }
+      .bg-particles span:nth-child(14) {
+        color: #5d00ff;
+        top: 82%;
+        left: 67%;
+        animation-duration: 22s;
+        animation-delay: -48s;
+        transform-origin: 24vw 11vh;
+        box-shadow: 40vmin 0 5.489222835876409vmin currentColor;
+      }
+      .bg-particles span:nth-child(15) {
+        color: #fffafa;
+        top: 2%;
+        left: 7%;
+        animation-duration: 24s;
+        animation-delay: -9s;
+        transform-origin: -15vw -2vh;
+        box-shadow: 40vmin 0 5.20261277032213vmin currentColor;
+      }
+      .bg-particles span:nth-child(16) {
+        color: #fffafa;
+        top: 1%;
+        left: 79%;
+        animation-duration: 51s;
+        animation-delay: -43s;
+        transform-origin: 0vw 23vh;
+        box-shadow: -40vmin 0 5.765035469891744vmin currentColor;
+      }
+      .bg-particles span:nth-child(17) {
+        color: #fffafa;
+        top: 10%;
+        left: 87%;
+        animation-duration: 37s;
+        animation-delay: -28s;
+        transform-origin: -2vw 5vh;
+        box-shadow: 40vmin 0 5.212735158790593vmin currentColor;
+      }
+      .bg-particles span:nth-child(18) {
+        color: #f18741;
+        top: 11%;
+        left: 97%;
+        animation-duration: 19s;
+        animation-delay: -21s;
+        transform-origin: 5vw -6vh;
+        box-shadow: 40vmin 0 5.062913486723465vmin currentColor;
+      }
+      .bg-particles span:nth-child(19) {
+        color: #fffafa;
+        top: 10%;
+        left: 58%;
+        animation-duration: 18s;
+        animation-delay: -42s;
+        transform-origin: 17vw 24vh;
+        box-shadow: -40vmin 0 5.299993414838838vmin currentColor;
+      }
+      .bg-particles span:nth-child(20) {
+        color: #fffafa;
+        top: 40%;
+        left: 79%;
+        animation-duration: 19s;
+        animation-delay: -31s;
+        transform-origin: 20vw 1vh;
+        box-shadow: -40vmin 0 5.938668192742349vmin currentColor;
+      }
+
+      /* ===== BASE ===== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+      }
+      body {
+        background: #090d16;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      /* ===== LOGIN ===== */
+      .login-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(9, 13, 22, 0.96);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        padding: 20px;
+      }
+      .login-overlay.hidden {
+        display: none;
+      }
+      .login-box {
+        background: #ffffff;
+        border-radius: 22px;
+        padding: 32px 28px;
+        max-width: 440px;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+        animation: fadeSlide 0.4s ease;
+      }
+      .login-box .login-icon {
+        font-size: 3rem;
+        margin-bottom: 6px;
+      }
+      .login-box h2 {
+        color: #0a2540;
+        font-size: 1.35rem;
+        margin-bottom: 4px;
+      }
+      .login-box .login-sub {
+        color: #4a6a8a;
+        font-size: 0.85rem;
+        margin-bottom: 18px;
+      }
+      .login-box .login-form-group {
+        text-align: left;
+        margin: 12px 0;
+      }
+      .login-box .login-form-group label {
+        display: block;
+        font-weight: 600;
+        color: #1a3a5a;
+        margin-bottom: 6px;
+        font-size: 0.9rem;
+      }
+      .login-box .login-input,
+      .login-box .login-select {
+        width: 100%;
+        padding: 11px 16px;
+        background: #fff;
+        border: 2px solid #d0dce8;
+        border-radius: 12px;
+        color: #0a2540;
+        font-size: 0.95rem;
+        outline: none;
+        transition: 0.2s;
+      }
+      .login-box .login-input:focus,
+      .login-box .login-select:focus {
+        border-color: #0a2540;
+        box-shadow: 0 0 0 3px rgba(10, 37, 64, 0.1);
+      }
+      .login-box .login-btn {
+        margin-top: 16px;
+        background: #0a2540;
+        color: #fff;
+        border: none;
+        padding: 12px 40px;
+        border-radius: 40px;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.25s;
+        width: 100%;
+      }
+      .login-box .login-btn:hover {
+        background: #1a3a5a;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(10, 37, 64, 0.25);
+      }
+      .login-box .login-note {
+        margin-top: 14px;
+        color: #7a9ab5;
+        font-size: 0.75rem;
+        line-height: 1.5;
+      }
+
+      /* ===== BADGE ===== */
+      .siswa-badge {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        background: rgba(10, 37, 64, 0.92);
+        color: #fff;
+        padding: 5px 16px;
+        border-radius: 20px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        z-index: 20;
+        display: none;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+      }
+      .siswa-badge.active {
+        display: block;
+      }
+      .siswa-badge .sb-sep {
+        opacity: 0.5;
+        margin: 0 6px;
+      }
+
+      /* ===== SLIDE ===== */
+      .slide-container {
+        width: 100%;
+        max-width: 1100px;
+        aspect-ratio: 16 / 9;
+        background: #ffffff;
+        border-radius: 24px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+      }
+      .slide-content {
+        flex: 1;
+        overflow-y: auto;
+        padding: 16px 24px;
+        scroll-behavior: smooth;
+      }
+      .slide-content::-webkit-scrollbar {
+        width: 4px;
+      }
+      .slide-content::-webkit-scrollbar-track {
+        background: #eef2f6;
+      }
+      .slide-content::-webkit-scrollbar-thumb {
+        background: #0a2540;
+        border-radius: 10px;
+      }
+      .slide {
+        display: none;
+        animation: fadeSlide 0.35s ease;
+      }
+      .slide.active {
+        display: block;
+      }
+      @keyframes fadeSlide {
+        0% {
+          opacity: 0.3;
+          transform: translateY(10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .slide-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 24px;
+        background: #f9fbfd;
+        border-top: 1px solid #e6edf4;
+        flex-shrink: 0;
+      }
+      .slide-nav .indicator {
+        color: #4a6a8a;
+        font-weight: 600;
+        font-size: 0.8rem;
+      }
+      .slide-nav .indicator span {
+        color: #0a2540;
+        font-weight: 700;
+      }
+      .nav-btn {
+        background: #0a2540;
+        border: none;
+        padding: 5px 18px;
+        border-radius: 40px;
+        color: #fff;
+        font-weight: 600;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      .nav-btn:hover {
+        background: #1a3a5a;
+        transform: scale(1.02);
+      }
+      .nav-btn:disabled {
+        background: #b0c4d8;
+        cursor: not-allowed;
+        transform: none;
+      }
+      .nav-btn-secondary {
+        background: #eef2f6;
+        color: #0a2540;
+      }
+      .nav-btn-secondary:hover {
+        background: #dce4ec;
+      }
+
+      /* ===== KOMPONEN ===== */
+      .card {
+        background: #f9fbfd;
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin: 10px 0;
+        border: 1px solid #e6edf4;
+      }
+      .card-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #0a2540;
+        margin-bottom: 4px;
+      }
+      .card-sub {
+        color: #1e3a5a;
+        font-size: 0.85rem;
+        line-height: 1.5;
+      }
+      .tujuan-box {
+        background: #eaf2fa;
+        border-radius: 8px;
+        padding: 8px 14px;
+        margin-bottom: 8px;
+        border-left: 4px solid #f5b342;
+        font-size: 0.82rem;
+        color: #0a2540;
+      }
+      .prinsip-box {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+      }
+      .prinsip-box span {
+        background: #eef2f6;
+        padding: 2px 10px;
+        border-radius: 20px;
+        font-size: 0.6rem;
+        font-weight: 600;
+        color: #0a2540;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .prinsip-box span.berkesadaran {
+        background: #d4e6f1;
+      }
+      .prinsip-box span.bermakna {
+        background: #fdebd0;
+      }
+      .prinsip-box span.menggembirakan {
+        background: #d5f5e3;
+      }
+      .canvas-wrap {
+        display: flex;
+        justify-content: center;
+        margin: 6px 0;
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 4px;
+        border: 1px solid #e6edf4;
+      }
+      canvas {
+        border-radius: 8px;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        background: #ffffff;
+      }
+      .control-group {
+        margin: 6px 0 4px;
+      }
+      .control-group label {
+        display: flex;
+        justify-content: space-between;
+        color: #1a3a5a;
+        font-weight: 500;
+        font-size: 0.78rem;
+      }
+      .control-group label span {
+        color: #0a2540;
+        font-weight: 700;
+      }
+      input[type='range'] {
+        width: 100%;
+        height: 4px;
+        -webkit-appearance: none;
+        appearance: none;
+        background: #d0dce8;
+        border-radius: 10px;
+        outline: none;
+      }
+      input[type='range']::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 14px;
+        height: 14px;
+        background: #0a2540;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      input[type='range']::-moz-range-thumb {
+        width: 14px;
+        height: 14px;
+        background: #0a2540;
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+      }
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 6px;
+        margin: 6px 0;
+      }
+      .info-box {
+        background: #ffffff;
+        border-radius: 8px;
+        padding: 6px 10px;
+        text-align: center;
+        border-left: 4px solid #0a2540;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+      }
+      .info-box .label {
+        font-size: 0.6rem;
+        color: #4a6a8a;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .info-box .value {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #0a2540;
+      }
+      .btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin: 6px 0;
+        justify-content: center;
+      }
+      .btn-mode {
+        background: #f0f4f9;
+        border: 2px solid transparent;
+        padding: 4px 12px;
+        border-radius: 40px;
+        color: #1a3a5a;
+        font-weight: 600;
+        font-size: 0.75rem;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      .btn-mode:hover {
+        background: #e2eaf2;
+      }
+      .btn-mode.active-mode {
+        border-color: #0a2540;
+        background: #0a2540;
+        color: #fff;
+      }
+      .btn {
+        background: #0a2540;
+        border: none;
+        padding: 5px 16px;
+        border-radius: 40px;
+        font-weight: 700;
+        color: #fff;
+        font-size: 0.78rem;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      .btn:hover {
+        background: #1a3a5a;
+        transform: scale(1.02);
+      }
+      .evaluation-box {
+        background: #f0f7ff;
+        border-radius: 10px;
+        padding: 10px 14px;
+        margin: 8px 0;
+        border: 1px dashed #0a2540;
+      }
+      .evaluation-box .soal {
+        color: #1a3a5a;
+        font-size: 0.82rem;
+        line-height: 1.5;
+      }
+      .evaluation-box .answer-area {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        align-items: center;
+        margin-top: 6px;
+      }
+      .evaluation-box .answer-area input,
+      .evaluation-box .answer-area select {
+        background: #ffffff;
+        border: 1px solid #d0dce8;
+        border-radius: 30px;
+        padding: 3px 12px;
+        color: #0a2540;
+        font-size: 0.78rem;
+        outline: none;
+        width: 90px;
+      }
+      .evaluation-box .answer-area select {
+        width: auto;
+        max-width: 100%;
+      }
+      .feedback {
+        margin-top: 6px;
+        font-weight: 600;
+        font-size: 0.78rem;
+      }
+      .feedback.correct {
+        color: #0a7a3a;
+      }
+      .feedback.wrong {
+        color: #b33;
+      }
+      .kesimpulan-box {
+        background: #eaf2fa;
+        border-radius: 8px;
+        padding: 8px 12px;
+        margin-top: 6px;
+        border-left: 4px solid #f5b342;
+      }
+      .kesimpulan-box h4 {
+        color: #0a2540;
+        font-size: 0.8rem;
+      }
+      .kesimpulan-box p {
+        color: #1a3a5a;
+        font-size: 0.78rem;
+        line-height: 1.5;
+      }
+      .cp-box {
+        background: #eaf2fa;
+        border-radius: 8px;
+        padding: 8px 12px;
+        margin-top: 12px;
+        border-left: 4px solid #0a2540;
+      }
+      .cp-box h4 {
+        color: #0a2540;
+        font-size: 1rem;
+        margin-bottom: 2px;
+      }
+      .cp-box p {
+        color: #1a3a5a;
+        font-size: 0.78rem;
+        line-height: 1.5;
+      }
+      .dpl-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3px;
+        margin-top: 4px;
+      }
+      .dpl-box span {
+        background: #0a2540;
+        color: #fff;
+        padding: 2px 8px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      .rumus-box {
+        background: #f0f7ff;
+        border-radius: 8px;
+        padding: 8px 12px;
+        border-left: 4px solid #2980b9;
+        margin: 6px 0;
+      }
+      .rumus-box .label {
+        font-size: 0.6rem;
+        color: #4a6a8a;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .rumus-box .isi {
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: #0a2540;
+        line-height: 1.7;
+      }
+      .rumus-box.gold {
+        border-left-color: #f5b342;
+      }
+      .rumus-box.red {
+        border-left-color: #e74c3c;
+      }
+      .rumus-box.green {
+        border-left-color: #27ae60;
+      }
+      .metode-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-top: 8px;
+      }
+      .metode-item {
+        background: #ffffff;
+        border-radius: 8px;
+        padding: 8px 12px;
+        border: 1px solid #e6edf4;
+      }
+      .metode-item .mtitle {
+        font-weight: 700;
+        color: #0a2540;
+        font-size: 0.8rem;
+        margin-bottom: 4px;
+      }
+      .metode-item .mbody {
+        font-size: 0.72rem;
+        color: #1a3a5a;
+        line-height: 1.6;
+      }
+      .contoh-box {
+        background: #fef9e7;
+        border-radius: 8px;
+        padding: 8px 14px;
+        border-left: 4px solid #f5b342;
+        margin-top: 8px;
+        font-size: 0.78rem;
+        color: #1a3a5a;
+        line-height: 1.7;
+      }
+      .contoh-box strong {
+        color: #0a2540;
+      }
+      .jenis-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+        margin-top: 8px;
+      }
+      .jenis-card {
+        background: #ffffff;
+        border-radius: 8px;
+        padding: 8px 10px;
+        border-top: 4px solid #0a2540;
+        text-align: center;
+      }
+      .jenis-card.pos {
+        border-top-color: #27ae60;
+      }
+      .jenis-card.zero {
+        border-top-color: #f5b342;
+      }
+      .jenis-card.neg {
+        border-top-color: #e74c3c;
+      }
+      .jenis-card .jc-label {
+        font-size: 0.65rem;
+        color: #4a6a8a;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .jenis-card .jc-value {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #0a2540;
+        margin: 2px 0;
+      }
+      .jenis-card .jc-desc {
+        font-size: 0.68rem;
+        color: #1a3a5a;
+        line-height: 1.4;
+      }
+
+      /* ===== KUIS ===== */
+      .kuis-view {
+        display: none;
+      }
+      .kuis-view.active {
+        display: block;
+      }
+      .kuis-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #e6edf4;
+      }
+      .kuis-header h2 {
+        font-size: 1.1rem;
+        color: #0a2540;
+      }
+      .kuis-badge {
+        background: #eaf2fa;
+        color: #0a2540;
+        padding: 4px 14px;
+        border-radius: 20px;
+        font-weight: 700;
+        font-size: 0.85rem;
+        border: 1px solid #d0dce8;
+      }
+      .kuis-timer {
+        background: #fef9e7;
+        color: #b8860b;
+        padding: 4px 16px;
+        border-radius: 20px;
+        font-weight: 700;
+        font-size: 1rem;
+        border: 1px solid #f5b342;
+        font-variant-numeric: tabular-nums;
+      }
+      .kuis-timer.warning {
+        color: #b33;
+        border-color: #e57373;
+        animation: pulseKuis 1s infinite;
+      }
+      @keyframes pulseKuis {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.55;
+        }
+      }
+      .kuis-soal-card {
+        background: #f9fbfd;
+        border-radius: 12px;
+        padding: 18px 20px;
+        border-left: 5px solid #0a2540;
+        animation: fadeSlide 0.3s ease;
+      }
+      .kuis-nomor {
+        font-weight: 700;
+        color: #4a6a8a;
+        font-size: 0.85rem;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .kuis-pertanyaan {
+        font-weight: 600;
+        font-size: 1rem;
+        color: #0a2540;
+        line-height: 1.6;
+        margin-bottom: 16px;
+      }
+      .kuis-opsi-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .kuis-opsi {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 16px;
+        background: #fff;
+        border-radius: 10px;
+        border: 2px solid #e6edf4;
+        cursor: pointer;
+        transition: 0.2s;
+        color: #1a3a5a;
+        font-size: 0.9rem;
+      }
+      .kuis-opsi:hover {
+        border-color: #0a2540;
+        background: #f9fbfd;
+      }
+      .kuis-opsi.selected {
+        border-color: #0a2540;
+        background: #eaf2fa;
+        box-shadow: 0 0 0 3px rgba(10, 37, 64, 0.08);
+      }
+      .kuis-opsi .huruf {
+        font-weight: 700;
+        color: #4f46e5;
+        min-width: 24px;
+      }
+      .kuis-opsi input[type='radio'] {
+        accent-color: #0a2540;
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+        flex-shrink: 0;
+      }
+      .kuis-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin-top: 14px;
+        padding-top: 12px;
+        border-top: 1px solid #e6edf4;
+        flex-wrap: wrap;
+      }
+      .kuis-btn {
+        background: #0a2540;
+        color: #fff;
+        border: none;
+        padding: 9px 22px;
+        border-radius: 40px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      .kuis-btn:hover:not(:disabled) {
+        background: #1a3a5a;
+        transform: scale(1.02);
+      }
+      .kuis-btn:disabled {
+        background: #b0c4d8;
+        cursor: not-allowed;
+        transform: none;
+      }
+      .kuis-btn-secondary {
+        background: #eef2f6;
+        color: #0a2540;
+      }
+      .kuis-btn-secondary:hover:not(:disabled) {
+        background: #dce4ec;
+      }
+      .kuis-btn-success {
+        background: #059669;
+        color: #fff;
+      }
+      .kuis-btn-success:hover:not(:disabled) {
+        background: #10b981;
+      }
+      .kuis-hasil {
+        text-align: center;
+        padding: 12px 8px;
+      }
+      .kuis-skor-angka {
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: #0a2540;
+        padding: 8px 24px;
+        background: #eaf2fa;
+        border-radius: 40px;
+        display: inline-block;
+        margin: 10px 0;
+        border: 2px solid #0a2540;
+      }
+      .kuis-detail {
+        background: #f9fbfd;
+        padding: 14px 18px;
+        border-radius: 12px;
+        margin: 12px auto;
+        border: 1px solid #e6edf4;
+        max-width: 400px;
+        text-align: left;
+        font-size: 0.9rem;
+        color: #1a3a5a;
+        line-height: 1.7;
+      }
+      .kuis-status-send {
+        margin-top: 12px;
+        padding: 10px 16px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 0.88rem;
+        background: #fef9e7;
+        color: #b8860b;
+        border: 1px solid #f5b342;
+        display: inline-block;
+      }
+      .kuis-status-send.success {
+        background: #d5f5e3;
+        color: #0a7a3a;
+        border-color: #4caf50;
+      }
+      .kuis-status-send.error {
+        background: #fdecea;
+        color: #b33;
+        border-color: #e57373;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 800px) {
+        .slide-container {
+          aspect-ratio: unset;
+          min-height: 100vh;
+          border-radius: 16px;
+        }
+        .slide-content {
+          padding: 12px 16px;
+        }
+        .slide-nav {
+          padding: 6px 14px;
+          flex-wrap: wrap;
+          gap: 4px;
+          justify-content: center;
+        }
+        .info-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .siswa-badge {
+          top: 8px;
+          right: 8px;
+          font-size: 0.7rem;
+          padding: 4px 10px;
+        }
+        .metode-grid {
+          grid-template-columns: 1fr;
+        }
+        .jenis-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 500px) {
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+        .nav-btn {
+          padding: 3px 12px;
+          font-size: 0.7rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- BACKGROUND -->
+    <div class="bg-particles">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <!-- LOGIN OVERLAY -->
+    <div id="loginOverlay" class="login-overlay">
+      <div class="login-box">
+        <div class="login-icon">🧮</div>
+        <h2>Selamat Datang</h2>
+        <p class="login-sub">Isi identitas dulu sebelum belajar</p>
+
+        <div class="login-form-group">
+          <label>Nama Lengkap</label>
+          <input
+            type="text"
+            id="loginNama"
+            class="login-input"
+            placeholder="Ketik nama Anda..."
+            autocomplete="off"
+          />
+        </div>
+        <div class="login-form-group">
+          <label>Kelas</label>
+          <select id="loginKelas" class="login-select">
+            <option value="">-- Pilih Kelas --</option>
+            <option value="10.A">10.A</option>
+            <option value="10.B">10.B</option>
+            <option value="10.C">10.C</option>
+            <option value="10.D">10.D</option>
+          </select>
+        </div>
+
+        <button class="login-btn" onclick="simpanLogin()">
+          🚀 Mulai Belajar
+        </button>
+        <p class="login-note">
+          Semua jawaban dan hasil belajarmu akan tercatat otomatis untuk guru.
+        </p>
+      </div>
+    </div>
+
+    <div class="slide-container">
+      <div class="siswa-badge" id="siswaBadge">
+        👤 <span id="siswaNamaDisplay">-</span>
+        <span class="sb-sep">•</span>
+        <span id="siswaKelasDisplay">-</span>
+      </div>
+
+      <div class="slide-content" id="slideContent">
+        <!-- ========== SLIDE 0: SPLASH ========== -->
+        <div class="slide" data-slide="0">
+          <div
+            style="
+              background: linear-gradient(
+                135deg,
+                #0a2540 0%,
+                #1a5a7a 60%,
+                #2980b9 100%
+              );
+              border-radius: 16px;
+              min-height: 480px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              padding: 24px;
+            "
+          >
+            <div style="font-size: 3rem">🧮</div>
+            <h1
+              style="
+                color: #fff;
+                font-size: 2rem;
+                margin-top: 8px;
+                letter-spacing: 0.5px;
+              "
+            >
+              Persamaan Kuadrat
+            </h1>
+            <p
+              style="
+                color: #f5b342;
+                font-size: 1.15rem;
+                font-weight: 700;
+                margin-top: 6px;
+              "
+            >
+              ax² + bx + c = 0
+            </p>
+            <p
+              style="
+                color: #cfe2f3;
+                font-size: 0.85rem;
+                margin-top: 14px;
+                max-width: 420px;
+                line-height: 1.6;
+              "
+            >
+              Belajar bentuk umum, akar-akar, diskriminan, dan operasi akar
+            </p>
+            <button
+              onclick="goToSlide(1)"
+              style="
+                margin-top: 32px;
+                background: #f5b342;
+                border: none;
+                padding: 14px 44px;
+                border-radius: 60px;
+                color: #0a2540;
+                font-size: 1.1rem;
+                font-weight: 700;
+                cursor: pointer;
+                transition: 0.3s;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+              "
+              onmouseover="this.style.transform = 'scale(1.05)'"
+              onmouseout="this.style.transform = 'scale(1)'"
+            >
+              🚀 Mulai Belajar
+            </button>
+          </div>
+        </div>
+
+        <!-- ========== SLIDE 1: PENDAHULUAN ========== -->
+        <div class="slide" data-slide="1">
+          <div style="text-align: center; padding: 8px 0 4px">
+            <h1 style="font-size: 1.55rem; color: #0a2540; margin: 4px 0">
+              🧮 Persamaan Kuadrat
+            </h1>
+            <p style="color: #1a5a7a; font-size: 0.85rem">
+              Bentuk Umum, Akar, Diskriminan, &amp; Operasi Akar
+            </p>
+          </div>
+
+          <div class="cp-box">
+            <h4>🎯 Capaian Pembelajaran</h4>
+            <p>
+              <strong
+                >Menjelaskan dan menentukan akar-akar, jenis akar, serta operasi
+                akar-akar persamaan kuadrat dengan berbagai metode.</strong
+              >
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-title">📋 Dimensi Profil Lulusan (DPL)</div>
+            <div class="dpl-box">
+              <span>🧠 Penalaran Kritis</span>
+              <span>💡 Kreativitas</span>
+              <span>🤝 Kolaborasi</span>
+              <span>🚀 Kemandirian</span>
+              <span>💬 Komunikasi</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">🗺️ Peta Materi</div>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                gap: 4px;
+                flex-wrap: wrap;
+                margin-top: 6px;
+              "
+            >
+              <span
+                style="
+                  background: #f9fbfd;
+                  padding: 3px 10px;
+                  border-radius: 6px;
+                  border: 1px solid #e6edf4;
+                  font-size: 12px;
+                "
+                >🧠 Asesmen Awal</span
+              >
+              <span
+                style="
+                  background: #f9fbfd;
+                  padding: 3px 10px;
+                  border-radius: 6px;
+                  border: 1px solid #e6edf4;
+                  font-size: 12px;
+                "
+                >📐 Bentuk Umum</span
+              >
+              <span
+                style="
+                  background: #f9fbfd;
+                  padding: 3px 10px;
+                  border-radius: 6px;
+                  border: 1px solid #e6edf4;
+                  font-size: 12px;
+                "
+                >🔍 Akar-akar</span
+              >
+              <span
+                style="
+                  background: #f9fbfd;
+                  padding: 3px 10px;
+                  border-radius: 6px;
+                  border: 1px solid #e6edf4;
+                  font-size: 12px;
+                "
+                >📊 Diskriminan</span
+              >
+              <span
+                style="
+                  background: #f9fbfd;
+                  padding: 3px 10px;
+                  border-radius: 6px;
+                  border: 1px solid #e6edf4;
+                  font-size: 12px;
+                "
+                >➕ Operasi Akar</span
+              >
+              <span
+                style="
+                  background: #f9fbfd;
+                  padding: 3px 10px;
+                  border-radius: 6px;
+                  border: 1px solid #e6edf4;
+                  font-size: 12px;
+                "
+                >📝 Kuis Akhir</span
+              >
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 20px">
+            <p style="color: #1e3a5a; font-size: 0.9rem">
+              Modul ini terdiri dari <strong>11 slide</strong>. Gunakan tombol
+              navigasi di bawah atau tombol panah pada keyboard.
+            </p>
+          </div>
+        </div>
+
+        <!-- ========== SLIDE 2: ASESMEN AWAL ========== -->
+        <div class="slide" data-slide="2">
+          <div class="card">
+            <div class="card-title">🧠 Asesmen Awal – Seberapa Siap Kamu?</div>
+            <div class="card-sub">
+              Jawab 4 pertanyaan berikut untuk mengetahui kesiapanmu!
+            </div>
+          </div>
+
+          <div class="evaluation-box">
+            <div class="soal">
+              1. Bentuk umum persamaan linear satu variabel adalah ....
+            </div>
+            <div class="answer-area">
+              <select class="soal-prasyarat" data-benar="ax + b = 0">
+                <option value="">-- Pilih --</option>
+                <option value="ax + b = 0">ax + b = 0</option>
+                <option value="ax² + bx + c = 0">ax² + bx + c = 0</option>
+                <option value="ax + by = c">ax + by = c</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="evaluation-box">
+            <div class="soal">2. Nilai dari (−2)² adalah ....</div>
+            <div class="answer-area">
+              <select class="soal-prasyarat" data-benar="4">
+                <option value="">-- Pilih --</option>
+                <option value="4">4</option>
+                <option value="-4">−4</option>
+                <option value="2">2</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="evaluation-box">
+            <div class="soal">3. Nilai x yang memenuhi x² = 16 adalah ....</div>
+            <div class="answer-area">
+              <select class="soal-prasyarat" data-benar="x = 4 atau x = −4">
+                <option value="">-- Pilih --</option>
+                <option value="x = 4 atau x = −4">x = 4 atau x = −4</option>
+                <option value="x = 4 saja">x = 4 saja</option>
+                <option value="x = 8">x = 8</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="evaluation-box">
+            <div class="soal">4. Pemfaktoran dari x² + 5x + 6 adalah ....</div>
+            <div class="answer-area">
+              <select class="soal-prasyarat" data-benar="(x + 2)(x + 3)">
+                <option value="">-- Pilih --</option>
+                <option value="(x + 2)(x + 3)">(x + 2)(x + 3)</option>
+                <option value="(x + 1)(x + 6)">(x + 1)(x + 6)</option>
+                <option value="(x + 5)(x + 1)">(x + 5)(x + 1)</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="btn" onclick="cekPrasyarat()">✅ Cek Kesiapan</button>
+          <span class="feedback" id="feedbackPrasyarat"></span>
+        </div>
+
+        <!-- ========== SLIDE 3: BENTUK UMUM + SIMULATOR ========== -->
+        <div class="slide" data-slide="3">
+          <div class="tujuan-box">
+            <strong>🎯 Tujuan:</strong> Setelah slide ini, kamu mampu mengenali
+            bentuk umum persamaan kuadrat dan memvisualisasikan grafiknya
+            (parabola).
+          </div>
+          <div class="prinsip-box">
+            <span class="berkesadaran">Berkesadaran</span>
+            <span class="bermakna">Bermakna</span>
+            <span class="menggembirakan">Menggembirakan</span>
+          </div>
+
+          <div class="card">
+            <div class="card-title">📐 Bentuk Umum Persamaan Kuadrat</div>
+            <div class="card-sub">
+              Persamaan kuadrat adalah persamaan yang variabelnya berpangkat
+              tertinggi 2. Bentuk umumnya:
+            </div>
+
+            <div
+              class="rumus-box gold"
+              style="text-align: center; font-size: 1.1rem; padding: 12px"
+            >
+              <div class="isi" style="font-size: 1.3rem">ax² + bx + c = 0</div>
+            </div>
+
+            <div
+              style="
+                background: #fff;
+                border-radius: 8px;
+                padding: 8px 12px;
+                font-size: 0.78rem;
+                color: #1a3a5a;
+                line-height: 1.7;
+                border: 1px solid #e6edf4;
+              "
+            >
+              <strong>Keterangan:</strong><br />
+              • <strong>x</strong> = variabel<br />
+              • <strong>a</strong> = koefisien x², dengan syarat
+              <strong>a ≠ 0</strong><br />
+              • <strong>b</strong> = koefisien x<br />
+              • <strong>c</strong> = konstanta<br />
+              • <strong>a, b, c ∈ ℝ</strong>
+            </div>
+
+            <div class="canvas-wrap" style="margin-top: 8px">
+              <canvas id="canvasUmum" width="600" height="300"></canvas>
+            </div>
+
+            <div class="control-group">
+              <label>Koefisien a <span id="uaLabel">1</span></label>
+              <input
+                type="range"
+                id="uaSlider"
+                min="-3"
+                max="3"
+                value="1"
+                step="0.5"
+              />
+            </div>
+            <div class="control-group">
+              <label>Koefisien b <span id="ubLabel">0</span></label>
+              <input
+                type="range"
+                id="ubSlider"
+                min="-6"
+                max="6"
+                value="0"
+                step="0.5"
+              />
+            </div>
+            <div class="control-group">
+              <label>Konstanta c <span id="ucLabel">-4</span></label>
+              <input
+                type="range"
+                id="ucSlider"
+                min="-8"
+                max="8"
+                value="-4"
+                step="0.5"
+              />
+            </div>
+
+            <div class="info-grid">
+              <div class="info-box">
+                <div class="label">Persamaan</div>
+                <div
+                  class="value"
+                  id="infoPersamaan"
+                  style="font-size: 0.82rem"
+                >
+                  y = x² − 4
+                </div>
+              </div>
+              <div class="info-box" style="border-left-color: #2980b9">
+                <div class="label">Diskriminan</div>
+                <div class="value" id="infoD">16</div>
+              </div>
+              <div class="info-box" style="border-left-color: #e67e22">
+                <div class="label">Banyak Akar Real</div>
+                <div class="value" id="infoAkar">2</div>
+              </div>
+            </div>
+
+            <div class="kesimpulan-box">
+              <h4>📌 Kesimpulan</h4>
+              <p id="kesimpulanUmum">
+                Grafik y = x² − 4 memotong sumbu X di 2 titik (dua akar real
+                berbeda).
+              </p>
+            </div>
+
+            <div class="rumus-box">
+              <div class="label">Catatan</div>
+              <div class="isi">
+                Grafik persamaan kuadrat berbentuk <strong>parabola</strong>.
+                Jika a &gt; 0 terbuka ke atas, jika a &lt; 0 terbuka ke bawah.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== SLIDE 4: AKAR-AKAR & 3 CARA ========== -->
+        <div class="slide" data-slide="4">
+          <div class="tujuan-box">
+            <strong>🎯 Tujuan:</strong> Setelah slide ini, kamu mampu menentukan
+            akar-akar persamaan kuadrat dengan 3 cara: faktorisasi, kuadrat
+            sempurna, dan rumus ABC.
+          </div>
+
+          <div class="card">
+            <div class="card-title">🔍 Akar-akar Persamaan Kuadrat</div>
+            <div class="card-sub">
+              <strong>Akar-akar persamaan kuadrat</strong> adalah nilai variabel
+              x yang membuat persamaan bernilai benar. Akar-akar biasanya
+              dinotasikan <strong>x₁</strong> dan <strong>x₂</strong>.
+            </div>
+
+            <div class="metode-grid">
+              <div class="metode-item">
+                <div class="mtitle">① Faktorisasi</div>
+                <div class="mbody">
+                  Ubah ax² + bx + c menjadi bentuk (x − x₁)(x − x₂) = 0. Gunakan
+                  dua bilangan yang jika <strong>dijumlah = b</strong> dan
+                  <strong>dikali = a·c</strong>.
+                </div>
+              </div>
+              <div class="metode-item">
+                <div class="mtitle">② Kuadrat Sempurna</div>
+                <div class="mbody">
+                  Ubah ke bentuk (x + p)² = q, lalu tarik akar kedua ruas:
+                  <br />x + p = ±√q.
+                </div>
+              </div>
+              <div class="metode-item" style="grid-column: span 2">
+                <div class="mtitle">③ Rumus ABC (Rumus Kuadratik)</div>
+                <div
+                  class="mbody"
+                  style="text-align: center; font-size: 0.9rem"
+                >
+                  x₁,₂ = ( −b ± √(b² − 4ac) ) / (2a)
+                </div>
+              </div>
+            </div>
+
+            <div class="contoh-box">
+              <strong>Contoh 1 – Faktorisasi:</strong> Tentukan akar-akar dari
+              x² + 2x − 35 = 0.<br /><br />
+              Cari dua bilangan yang <strong>jumlah = 2</strong> dan
+              <strong>kali = −35</strong> → yaitu <strong>7</strong> dan
+              <strong>−5</strong>.<br />
+              Faktornya: (x + 7)(x − 5) = 0<br />
+              Jadi: <strong>x = −7</strong> atau <strong>x = 5</strong>.
+            </div>
+
+            <div class="contoh-box" style="border-left-color: #2980b9">
+              <strong>Contoh 2 – Rumus ABC:</strong> Tentukan akar dari x² + 2x
+              − 35 = 0.<br /><br />
+              a = 1, b = 2, c = −35<br />
+              x₁,₂ = ( −2 ± √(2² − 4·1·(−35)) ) / (2·1) = ( −2 ± √(4 + 140) ) /
+              2 = ( −2 ± √144 ) / 2 = ( −2 ± 12 ) / 2<br />
+              x₁ = (−2 + 12)/2 = 5 &nbsp;|&nbsp; x₂ = (−2 − 12)/2 = −7<br />
+              Jadi: <strong>x₁ = 5</strong> dan <strong>x₂ = −7</strong>. ✔
+            </div>
+
+            <div class="rumus-box green">
+              <div class="label">Kesimpulan</div>
+              <div class="isi">
+                Ketiga cara menghasilkan akar yang sama.
+                <strong>Faktorisasi</strong> paling cepat jika bilangan mudah
+                difaktorkan. <strong>Rumus ABC</strong> selalu bisa digunakan
+                untuk semua bentuk persamaan kuadrat.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== SLIDE 5: SOAL AKAR ========== -->
+        <div class="slide" data-slide="5">
+          <div class="card">
+            <div class="card-title">🧠 Soal – Akar-akar Persamaan Kuadrat</div>
+            <div class="card-sub">
+              Kerjakan 3 soal berikut! Jawabanmu akan langsung tercatat untuk
+              guru.
+            </div>
+          </div>
+
+          <div class="evaluation-box">
+            <div class="soal">
+              1. Akar-akar dari x² + 2x − 35 = 0 adalah ....
+            </div>
+            <div class="answer-area">
+              <select id="ak1">
+                <option value="">-- Pilih --</option>
+                <option value="x = 5 atau x = 7">x = 5 atau x = 7</option>
+                <option value="x = 5 atau x = −7">x = 5 atau x = −7</option>
+                <option value="x = −5 atau x = 7">x = −5 atau x = 7</option>
+                <option value="x = −5 atau x = −7">x = −5 atau x = −7</option>
+              </select>
+              <button class="btn" onclick="cekAkar1()">Cek</button>
+              <span class="feedback" id="fbAk1"></span>
+            </div>
+          </div>
+
+          <div class="evaluation-box">
+            <div class="soal">
+              2. Akar-akar dari x² − 6x + 8 = 0 adalah ....
+            </div>
+            <div class="answer-area">
+              <select id="ak2">
+                <option value="">-- Pilih --</option>
+                <option value="x = 2 atau x = 4">x = 2 atau x = 4</option>
+                <option value="x = −2 atau x = −4">x = −2 atau x = −4</option>
+                <option value="x = 2 atau x = −4">x = 2 atau x = −4</option>
+                <option value="x = −2 atau x = 4">x = −2 atau x = 4</option>
+              </select>
+              <button class="btn" onclick="cekAkar2()">Cek</button>
+              <span class="feedback" id="fbAk2"></span>
+            </div>
+          </div>
+
+          <div class="evaluation-box">
+            <div class="soal">
+              3. Akar-akar dari x² − x − 12 = 0 adalah ....
+            </div>
+            <div class="answer-area">
+              <select id="ak3">
+                <option value="">-- Pilih --</option>
+                <option value="x = 4 atau x = 3">x = 4 atau x = 3</option>
+                <option value="x = 4 atau x = −3">x = 4 atau x = −3</option>
+                <option value="x = −4 atau x = 3">x = −4 atau x = 3</option>
+                <option value="x = −4 atau x = −3">x = −4 atau x = −3</option>
+              </select>
+              <button class="btn" onclick="cekAkar3()">Cek</button>
+              <span class="feedback" id="fbAk3"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== SLIDE 6: DISKRIMINAN & JENIS AKAR ========== -->
+        <div class="slide" data-slide="6">
+          <div class="tujuan-box">
+            <strong>🎯 Tujuan:</strong> Setelah slide ini, kamu mampu menghitung
+            diskriminan dan menentukan jenis akar tanpa harus mencari akarnya.
+          </div>
+
+          <div class="card">
+            <div class="card-title">📊 Diskriminan &amp; Jenis Akar</div>
+            <div class="card-sub">
+              <strong>Diskriminan</strong> disimbolkan dengan
+              <strong>D</strong> dan dirumuskan:
+            </div>
+
+            <div
+              class="rumus-box gold"
+              style="text-align: center; padding: 12px"
+            >
+              <div class="isi" style="font-size: 1.2rem">D = b² − 4ac</div>
+            </div>
+
+            <div class="jenis-grid">
+              <div class="jenis-card pos">
+                <div class="jc-label">D &gt; 0</div>
+                <div class="jc-value">2 akar real berbeda</div>
+                <div class="jc-desc">Grafik memotong sumbu X di 2 titik</div>
+              </div>
+              <div class="jenis-card zero">
+                <div class="jc-label">D = 0</div>
+                <div class="jc-value">2 akar real kembar</div>
+                <div class="jc-desc">Grafik menyinggung sumbu X</div>
+              </div>
+              <div class="jenis-card neg">
+                <div class="jc-label">D &lt; 0</div>
+                <div class="jc-value">Tidak ada akar real</div>
+                <div class="jc-desc">Grafik tidak menyentuh sumbu X</div>
+              </div>
+            </div>
+
+            <div class="canvas-wrap" style="margin-top: 8px">
+              <canvas id="canvasDisk" width="600" height="260"></canvas>
+            </div>
+
+            <div class="contoh-box">
+              <strong>Contoh:</strong> Tentukan jenis akar dari 2x² − 8x + 8 =
+              0.<br />
+              a = 2, b = −8, c = 8<br />
+              D = b² − 4ac = (−8)² − 4(2)(8) = 64 − 64 = <strong>0</strong
+              ><br />
+              Karena D = 0, maka persamaan memiliki
+              <strong>dua akar real kembar</strong>.
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== SLIDE 7: OPERASI AKAR ========== -->
+        <div class="slide" data-slide="7">
+          <div class="tujuan-box">
+            <strong>🎯 Tujuan:</strong> Setelah slide ini, kamu mampu menghitung
+            jumlah, hasil kali, dan selisih akar-akar tanpa harus mencari
+            akarnya terlebih dahulu.
+          </div>
+
+          <div class="card">
+            <div class="card-title">➕ Operasi Akar-akar Persamaan Kuadrat</div>
+            <div class="card-sub">
+              Jika x₁ dan x₂ adalah akar-akar dari ax² + bx + c = 0, maka
+              berlaku rumus berikut.
+            </div>
+
+            <div
+              style="
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+                margin-top: 8px;
+              "
+            >
+              <div class="rumus-box" style="margin: 0">
+                <div class="label">Jumlah Akar</div>
+                <div class="isi" style="text-align: center; font-size: 1rem">
+                  x₁ + x₂ = −b/a
+                </div>
+              </div>
+              <div class="rumus-box gold" style="margin: 0">
+                <div class="label">Hasil Kali Akar</div>
+                <div class="isi" style="text-align: center; font-size: 1rem">
+                  x₁ · x₂ = c/a
+                </div>
+              </div>
+              <div class="rumus-box red" style="margin: 0; grid-column: span 2">
+                <div class="label">Selisih Akar</div>
+                <div class="isi" style="text-align: center; font-size: 1rem">
+                  |x₁ − x₂| = √D / a &nbsp;&nbsp;&nbsp; (dengan D = b² − 4ac)
+                </div>
+              </div>
+            </div>
+
+            <div class="contoh-box">
+              <strong>Contoh:</strong> Jika x₁ dan x₂ akar dari x² − 5x + 6 = 0,
+              tentukan x₁ + x₂, x₁ · x₂, dan |x₁ − x₂|.<br />
+              a = 1, b = −5, c = 6, D = 25 − 24 = 1<br />
+              • x₁ + x₂ = −(−5)/1 = <strong>5</strong><br />
+              • x₁ · x₂ = 6/1 = <strong>6</strong><br />
+              • |x₁ − x₂| = √1 / 1 = <strong>1</strong>
+            </div>
+
+            <div class="canvas-wrap" style="margin-top: 8px">
+              <canvas id="canvasOperasi" width="600" height="200"></canvas>
+            </div>
+
+            <div class="control-group">
+              <label>Koefisien a <span id="oaLabel">1</span></label>
+              <input
+                type="range"
+                id="oaSlider"
+                min="-3"
+                max="3"
+                value="1"
+                step="1"
+              />
+            </div>
+            <div class="control-group">
+              <label>Koefisien b <span id="obLabel">-5</span></label>
+              <input
+                type="range"
+                id="obSlider"
+                min="-8"
+                max="8"
+                value="-5"
+                step="1"
+              />
+            </div>
+            <div class="control-group">
+              <label>Konstanta c <span id="ocLabel">6</span></label>
+              <input
+                type="range"
+                id="ocSlider"
+                min="-8"
+                max="8"
+                value="6"
+                step="1"
+              />
+            </div>
+
+            <div class="info-grid">
+              <div class="info-box">
+                <div class="label">Diskriminan D</div>
+                <div class="value" id="oD">1</div>
+              </div>
+              <div class="info-box" style="border-left-color: #2980b9">
+                <div class="label">x₁ + x₂</div>
+                <div class="value" id="oSum">5</div>
+              </div>
+              <div class="info-box" style="border-left-color: #f5b342">
+                <div class="label">x₁ · x₂</div>
+                <div class="value" id="oProd">6</div>
+              </div>
+              <div class="info-box" style="border-left-color: #e74c3c">
+                <div class="label">|x₁ − x₂|</div>
+                <div class="value" id="oDiff">1</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== SLIDE 8: SOAL DISKRIMINAN & OPERASI ========== -->
+        <div class="slide" data-slide="8">
+          <div class="card">
+            <div class="card-title">
+              🧠 Soal – Diskriminan &amp; Operasi Akar
+            </div>
+            <div class="card-sub">
+              Kerjakan 3 soal berikut! Jawabanmu akan langsung tercatat untuk
+              guru.
+            </div>
+          </div>
+
+          <div class="evaluation-box">
+            <div class="soal">
+              1. Nilai diskriminan dari 2x² − 8x + 8 = 0 adalah ....
+            </div>
+            <div class="answer-area">
+              <input type="number" id="d1" placeholder="D = ..." step="1" />
+              <button class="btn" onclick="cekD1()">Cek</button>
+              <span class="feedback" id="fbD1"></span>
+            </div>
+          </div>
+
+          <div class="evaluation-box">
+            <div class="soal">
+              2. Jika x₁ dan x₂ akar dari x² − 5x + 6 = 0, maka x₁ + x₂ = ....
+            </div>
+            <div class="answer-area">
+              <input
+                type="number"
+                id="d2"
+                placeholder="x₁ + x₂ = ..."
+                step="1"
+              />
+              <button class="btn" onclick="cekD2()">Cek</button>
+              <span class="feedback" id="fbD2"></span>
+            </div>
+          </div>
+
+          <div class="evaluation-box">
+            <div class="soal">
+              3. Jika x₁ dan x₂ akar dari 2x² + 4x − 6 = 0, maka x₁ · x₂ = ....
+            </div>
+            <div class="answer-area">
+              <input
+                type="number"
+                id="d3"
+                placeholder="x₁ · x₂ = ..."
+                step="1"
+              />
+              <button class="btn" onclick="cekD3()">Cek</button>
+              <span class="feedback" id="fbD3"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== SLIDE 9: KUIS 10 SOAL ========== -->
+        <div class="slide" data-slide="9">
+          <div class="card">
+            <div class="card-title">📝 Kuis Akhir – Persamaan Kuadrat</div>
+            <div class="card-sub">
+              Kerjakan 10 soal berikut. Jawaban dan skormu akan otomatis
+              terkirim ke guru.
+            </div>
+          </div>
+
+          <div id="kuisSoal" class="kuis-view active">
+            <div class="kuis-header">
+              <h2>📝 Soal Persamaan Kuadrat</h2>
+              <div
+                style="
+                  display: flex;
+                  gap: 8px;
+                  align-items: center;
+                  flex-wrap: wrap;
+                "
+              >
+                <span class="kuis-badge" id="kuisProgress">1 / 10</span>
+                <span class="kuis-timer" id="kuisTimer">10:00</span>
+              </div>
+            </div>
+
+            <div id="kuisSoalContainer"></div>
+
+            <div class="kuis-nav">
+              <button
+                class="kuis-btn kuis-btn-secondary"
+                id="kuisPrev"
+                onclick="kuisPrev()"
+                disabled
+              >
+                ◀ Sebelumnya
+              </button>
+              <button
+                class="kuis-btn kuis-btn-success"
+                onclick="selesaikanKuis()"
+              >
+                📨 Kirim Jawaban
+              </button>
+              <button class="kuis-btn" id="kuisNext" onclick="kuisNext()">
+                Selanjutnya ▶
+              </button>
+            </div>
+          </div>
+
+          <div id="kuisHasil" class="kuis-view">
+            <div class="kuis-hasil">
+              <div style="font-size: 2rem">🏆</div>
+              <h3 style="color: #0a2540; margin: 4px 0">Hasil Kuismu</h3>
+              <div class="kuis-skor-angka" id="kuisSkorAngka">0</div>
+              <p style="color: #4a6a8a; font-size: 0.9rem">
+                Nilai Akhir (Skala 0 – 100)
+              </p>
+
+              <div class="kuis-detail">
+                <p><strong>Nama:</strong> <span id="kuisResultNama">-</span></p>
+                <p>
+                  <strong>Kelas:</strong> <span id="kuisResultKelas">-</span>
+                </p>
+                <p>
+                  <strong>Benar:</strong>
+                  <span id="kuisResultBenar">0</span> dari 10 soal
+                </p>
+              </div>
+
+              <div class="kuis-status-send" id="kuisStatusSend">
+                ⏳ Mengirim nilai ...
+              </div>
+
+              <div style="margin-top: 14px">
+                <button class="btn" onclick="resetKuisView()">
+                  🔄 Kerjakan Ulang
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== SLIDE 10: PENGEMBANG ========== -->
+        <div class="slide" data-slide="10">
+          <div class="card" style="text-align: center">
+            <h2 style="font-size: 1.6rem; color: #0a2540; font-weight: 700">
+              PENGEMBANG
+            </h2>
+            <hr
+              style="width: 60px; border: 2px solid #f5b342; margin: 10px auto"
+            />
+
+            <div style="margin-top: 16px; line-height: 2">
+              <p>
+                <strong style="font-size: 1.1rem"
+                  >Aan Junaidi, S.Si., Gr.</strong
+                >
+              </p>
+              <p style="color: #1a5a7a">
+                SMA Unggul Islam Al-Fahd <br />
+                Banyuasin, Sumatera Selatan
+              </p>
+              <p>
+                <span style="font-weight: 600; margin-top: 8px">Email:</span>
+                aanjunaidi46@guru.sma.belajar.id
+              </p>
+            </div>
+
+            <div style="margin-top: 16px">
+              <a
+                href="https://www.instagram.com/aanjunaidi1414/"
+                target="_blank"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 6px;
+                  background: radial-gradient(
+                    circle at 30% 110%,
+                    #fdf497 0%,
+                    #fdf497 5%,
+                    #fd5949 45%,
+                    #d6249f 60%,
+                    #285aeb 90%
+                  );
+                  color: #fff;
+                  padding: 8px 20px;
+                  border-radius: 40px;
+                  text-decoration: none;
+                  font-weight: 600;
+                  font-size: 0.9rem;
+                  transition: 0.3s;
+                "
+                onmouseover="this.style.transform = 'scale(1.05)'"
+                onmouseout="this.style.transform = 'scale(1)'"
+                >📷 @aanjunaidi1414</a
+              >
+            </div>
+
+            <div
+              style="
+                font-size: 0.75rem;
+                color: #7a9ab5;
+                border-top: 1px solid #e6edf4;
+                padding-top: 12px;
+                margin-top: 24px;
+              "
+            >
+              <p>Konten ini disusun untuk lomba PNFI 2026</p>
+            </div>
+
+            <button class="btn" onclick="goToSlide(0)" style="margin-top: 12px">
+              🏠 Awal
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- NAVIGASI -->
+      <div class="slide-nav">
+        <button
+          class="nav-btn nav-btn-secondary"
+          id="prevBtn"
+          onclick="prevSlide()"
+        >
+          ← Sebelumnya
+        </button>
+        <div class="indicator">
+          Slide <span id="slideIndex">1</span> dari
+          <span id="slideTotal">11</span>
+        </div>
+        <button class="nav-btn" id="nextBtn" onclick="nextSlide()">
+          Selanjutnya →
+        </button>
+      </div>
+    </div>
+
+    <script>
+      /* ============================================================
+                  KONFIGURASI SPREADSHEET
+                  ============================================================ */
+      const SPREADSHEET_URL =
+        'https://script.google.com/macros/s/AKfycbxhjUkOKVvgTFXSLdl39ptq2X8ucH80dl_h8C6eE9u9WkzrrEGxDapCjRUbc05WaoOI/exec';
+      const MATERI = 'Persamaan Kuadrat';
+
+      /* ============================================================
+                  IDENTITAS SISWA
+                  ============================================================ */
+      let siswaNama = '';
+      let siswaKelas = '';
+
+      function simpanLogin() {
+        const nama = document.getElementById('loginNama').value.trim();
+        const kelas = document.getElementById('loginKelas').value;
+        if (!nama || !kelas) {
+          alert('Lengkapi Nama dan Kelas dulu ya!');
+          return;
+        }
+        siswaNama = nama;
+        siswaKelas = kelas;
+        document.getElementById('siswaNamaDisplay').textContent = nama;
+        document.getElementById('siswaKelasDisplay').textContent = kelas;
+        document.getElementById('siswaBadge').classList.add('active');
+        document.getElementById('loginOverlay').classList.add('hidden');
+        kirimKeSpreadsheet({
+          tipe: 'KEHADIRAN',
+          kategori: 'Login',
+          soal_no: '-',
+          soal: 'Masuk modul ' + MATERI,
+          jawaban: '-',
+          jawaban_benar: '-',
+          status: 'Hadir',
+        });
+      }
+      document.addEventListener('DOMContentLoaded', function () {
+        const inp = document.getElementById('loginNama');
+        if (inp)
+          inp.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') simpanLogin();
+          });
+      });
+
+      function kirimKeSpreadsheet(payload) {
+        const data = Object.assign(
+          {
+            materi: MATERI,
+            nama: siswaNama,
+            kelas: siswaKelas,
+            timestamp: new Date().toLocaleString('id-ID', { hour12: false }),
+          },
+          payload
+        );
+        const formBody = Object.keys(data)
+          .map((k) => encodeURIComponent(k) + '=' + encodeURIComponent(data[k]))
+          .join('&');
+        return fetch(SPREADSHEET_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: formBody,
+        }).catch((err) => console.warn('Kirim gagal:', err));
+      }
+
+      /* ============================================================
+                  NAVIGASI SLIDE
+                  ============================================================ */
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.slide');
+      const totalSlides = slides.length;
+      document.getElementById('slideTotal').textContent = totalSlides;
+
+      function goToSlide(index) {
+        if (index < 0 || index >= totalSlides) return;
+        slides.forEach((s, i) => s.classList.toggle('active', i === index));
+        currentSlide = index;
+        document.getElementById('slideIndex').textContent = index + 1;
+        document.getElementById('prevBtn').disabled = index === 0;
+        document.getElementById('nextBtn').disabled = index === totalSlides - 1;
+        document.getElementById('slideContent').scrollTop = 0;
+      }
+      function nextSlide() {
+        if (currentSlide < totalSlides - 1) goToSlide(currentSlide + 1);
+      }
+      function prevSlide() {
+        if (currentSlide > 0) goToSlide(currentSlide - 1);
+      }
+      document.addEventListener('keydown', function (e) {
+        const tag = (e.target.tagName || '').toLowerCase();
+        if (tag === 'input' || tag === 'select' || tag === 'textarea') return;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          nextSlide();
+        }
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          prevSlide();
+        }
+      });
+
+      /* ============================================================
+                  UTILITAS GAMBAR KOORDINAT
+                  ============================================================ */
+      const U = 25; // 1 satuan = 25 px
+
+      function drawKisiCustom(ctx, W, H, U) {
+        ctx.clearRect(0, 0, W, H);
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, W, H);
+
+        ctx.strokeStyle = '#e6eef6';
+        ctx.lineWidth = 1;
+        for (let x = (W / 2) % U; x <= W; x += U) {
+          ctx.beginPath();
+          ctx.moveTo(x + 0.5, 0);
+          ctx.lineTo(x + 0.5, H);
+          ctx.stroke();
+        }
+        for (let y = (H / 2) % U; y <= H; y += U) {
+          ctx.beginPath();
+          ctx.moveTo(0, y + 0.5);
+          ctx.lineTo(W, y + 0.5);
+          ctx.stroke();
+        }
+
+        ctx.strokeStyle = '#9db4c9';
+        ctx.lineWidth = 1.8;
+        ctx.beginPath();
+        ctx.moveTo(0, H / 2);
+        ctx.lineTo(W, H / 2);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(W / 2, H);
+        ctx.lineTo(W / 2, 0);
+        ctx.stroke();
+
+        ctx.fillStyle = '#9db4c9';
+        ctx.beginPath();
+        ctx.moveTo(W, H / 2);
+        ctx.lineTo(W - 8, H / 2 - 4);
+        ctx.lineTo(W - 8, H / 2 + 4);
+        ctx.closePath();
+        ctx.fill();
+        ctx.beginPath();
+        ctx.moveTo(W / 2, 0);
+        ctx.lineTo(W / 2 - 4, 8);
+        ctx.lineTo(W / 2 + 4, 8);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.fillStyle = '#7a9ab5';
+        ctx.font = 'bold 11px Segoe UI';
+        ctx.textAlign = 'left';
+        ctx.textBaseline = 'bottom';
+        ctx.fillText('x', W - 14, H / 2 - 6);
+        ctx.textBaseline = 'top';
+        ctx.fillText('y', W / 2 + 6, 4);
+      }
+
+      function toScr(x, y, W, H, U) {
+        return { x: W / 2 + x * U, y: H / 2 - y * U };
+      }
+
+      function round2(v) {
+        if (Math.abs(v - Math.round(v)) < 0.001) return Math.round(v);
+        return v.toFixed(2);
+      }
+
+      /* ============================================================
+                  ASESMEN AWAL
+                  ============================================================ */
+      function cekPrasyarat() {
+        const selects = document.querySelectorAll('.soal-prasyarat');
+        let benar = 0;
+        const total = selects.length;
+        selects.forEach((sel, i) => {
+          const isBenar = sel.value === sel.dataset.benar;
+          if (isBenar) benar++;
+          const teks = sel
+            .closest('.evaluation-box')
+            .querySelector('.soal')
+            .textContent.trim();
+          kirimKeSpreadsheet({
+            tipe: 'RESPON',
+            kategori: 'Asesmen Awal',
+            soal_no: i + 1,
+            soal: teks,
+            jawaban: sel.value || '(kosong)',
+            jawaban_benar: sel.dataset.benar,
+            status: isBenar ? 'Benar' : 'Salah',
+          });
+        });
+        const fb = document.getElementById('feedbackPrasyarat');
+        if (benar === total) {
+          fb.textContent =
+            '✅ Luar biasa! Kamu sudah siap. Nilai: ' + benar + '/' + total;
+          fb.className = 'feedback correct';
+        } else if (benar >= total - 1) {
+          fb.textContent =
+            '✅ Bagus! Hampir sempurna. Nilai: ' + benar + '/' + total;
+          fb.className = 'feedback correct';
+        } else if (benar >= Math.ceil(total / 2)) {
+          fb.textContent =
+            '⚠️ Cukup baik. Nilai: ' + benar + '/' + total + '. Perlu review.';
+          fb.className = 'feedback wrong';
+        } else {
+          fb.textContent =
+            '❌ Masih perlu belajar lagi. Nilai: ' + benar + '/' + total;
+          fb.className = 'feedback wrong';
+        }
+      }
+
+      /* ============================================================
+                  SIMULATOR BENTUK UMUM (Parabola)
+                  ============================================================ */
+      const canvasU = document.getElementById('canvasUmum');
+      const ctxU = canvasU.getContext('2d');
+      const uaSlider = document.getElementById('uaSlider');
+      const ubSlider = document.getElementById('ubSlider');
+      const ucSlider = document.getElementById('ucSlider');
+      let ua = 1,
+        ub = 0,
+        uc = -4;
+
+      function drawParabola() {
+        const W = canvasU.width,
+          H = canvasU.height;
+        drawKisiCustom(ctxU, W, H, U);
+
+        // Hitung range x dalam koordinat
+        const xMin = -W / 2 / U,
+          xMax = W / 2 / U;
+
+        // Cari range y untuk auto-scale vertical
+        let yMaxAbs = 0;
+        let samplePoints = [];
+        for (let px = 0; px <= W; px += 2) {
+          const mx = (px - W / 2) / U;
+          const my = ua * mx * mx + ub * mx + uc;
+          samplePoints.push({ px, my, mx });
+          yMaxAbs = Math.max(yMaxAbs, Math.abs(my));
+        }
+        // Auto-scale: kalau yMaxAbs > 6, perkecil U (gambar lebih gepeng)
+        let scaleY = U;
+        const maxVisibleY = H / 2 / U;
+        if (yMaxAbs > maxVisibleY * 0.9) {
+          scaleY = H / 2 / (yMaxAbs * 1.05);
+        }
+
+        // Gambar kurva parabola
+        ctxU.beginPath();
+        let started = false;
+        for (let px = 0; px <= W; px++) {
+          const mx = (px - W / 2) / U;
+          const my = ua * mx * mx + ub * mx + uc;
+          const py = H / 2 - my * scaleY;
+          if (py < -50 || py > H + 50) {
+            started = false;
+            continue;
+          }
+          if (!started) {
+            ctxU.moveTo(px, py);
+            started = true;
+          } else {
+            ctxU.lineTo(px, py);
+          }
+        }
+        ctxU.strokeStyle = '#2980b9';
+        ctxU.lineWidth = 2.8;
+        ctxU.stroke();
+
+        // Hitung diskriminan dan akar
+        const D = ub * ub - 4 * ua * uc;
+        const akar = [];
+        if (D >= 0 && ua !== 0) {
+          const x1 = (-ub + Math.sqrt(D)) / (2 * ua);
+          const x2 = (-ub - Math.sqrt(D)) / (2 * ua);
+          akar.push(x1);
+          if (Math.abs(x1 - x2) > 1e-6) akar.push(x2);
+        }
+
+        // Gambar titik akar
+        akar.forEach((rx, i) => {
+          const p = toScr(rx, 0, W, H, U);
+          if (p.x < 0 || p.x > W) return;
+          ctxU.beginPath();
+          ctxU.arc(p.x, p.y, 6, 0, 2 * Math.PI);
+          ctxU.fillStyle = '#e74c3c';
+          ctxU.fill();
+          ctxU.strokeStyle = '#fff';
+          ctxU.lineWidth = 2;
+          ctxU.stroke();
+          ctxU.fillStyle = '#0a2540';
+          ctxU.font = 'bold 12px Segoe UI';
+          ctxU.textAlign = 'center';
+          ctxU.textBaseline = 'bottom';
+          ctxU.fillText('x' + (i + 1) + '=' + round2(rx), p.x, p.y - 10);
+        });
+
+        // Vertex
+        if (ua !== 0) {
+          const xv = -ub / (2 * ua);
+          const yv = ua * xv * xv + ub * xv + uc;
+          const pv = toScr(xv, yv, W, H, U);
+          const pyv = H / 2 - yv * scaleY;
+          if (pv.x >= 0 && pv.x <= W) {
+            ctxU.beginPath();
+            ctxU.arc(pv.x, pyv, 4, 0, 2 * Math.PI);
+            ctxU.fillStyle = '#f5b342';
+            ctxU.fill();
+          }
+        }
+
+        // Info
+        let persTeks = 'y = ';
+        if (ua === 1) persTeks += 'x²';
+        else if (ua === -1) persTeks += '−x²';
+        else persTeks += ua + 'x²';
+        if (ub !== 0) {
+          if (ub > 0) persTeks += ' + ' + (ub === 1 ? '' : ub) + 'x';
+          else persTeks += ' − ' + (ub === -1 ? '' : Math.abs(ub)) + 'x';
+        }
+        if (uc !== 0) {
+          if (uc > 0) persTeks += ' + ' + uc;
+          else persTeks += ' − ' + Math.abs(uc);
+        } else persTeks += ' + 0';
+
+        document.getElementById('infoPersamaan').textContent = persTeks;
+        document.getElementById('infoD').textContent = round2(D);
+        document.getElementById('infoAkar').textContent =
+          D > 0 ? '2' : D === 0 ? '1 (kembar)' : '0';
+
+        let kesimpulan = '';
+        if (D > 0)
+          kesimpulan =
+            'Grafik memotong sumbu X di 2 titik (dua akar real berbeda).';
+        else if (D === 0)
+          kesimpulan =
+            'Grafik menyinggung sumbu X di 1 titik (dua akar real kembar).';
+        else
+          kesimpulan = 'Grafik tidak memotong sumbu X (tidak ada akar real).';
+        document.getElementById('kesimpulanUmum').textContent = kesimpulan;
+      }
+
+      function updateUmum() {
+        ua = parseFloat(uaSlider.value);
+        if (ua === 0) ua = 0.5;
+        ub = parseFloat(ubSlider.value);
+        uc = parseFloat(ucSlider.value);
+        document.getElementById('uaLabel').textContent = ua;
+        document.getElementById('ubLabel').textContent = ub;
+        document.getElementById('ucLabel').textContent = uc;
+        drawParabola();
+      }
+      uaSlider.addEventListener('input', updateUmum);
+      ubSlider.addEventListener('input', updateUmum);
+      ucSlider.addEventListener('input', updateUmum);
+
+      /* ============================================================
+                  VISUAL DISKRIMINAN (3 contoh)
+                  ============================================================ */
+      function drawDiskriminan() {
+        const canvas = document.getElementById('canvasDisk');
+        const ctx = canvas.getContext('2d');
+        const W = canvas.width,
+          H = canvas.height;
+        const panelW = W / 3;
+
+        ctx.clearRect(0, 0, W, H);
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, W, H);
+
+        const U3 = 18; // skala per panel
+        const cases = [
+          {
+            a: 1,
+            b: 0,
+            c: -4,
+            color: '#27ae60',
+            title: 'D > 0',
+            desc: 'Memotong 2 titik',
+            label: '2 akar real berbeda',
+          },
+          {
+            a: 1,
+            b: 0,
+            c: 0,
+            color: '#f5b342',
+            title: 'D = 0',
+            desc: 'Menyinggung 1 titik',
+            label: '2 akar real kembar',
+          },
+          {
+            a: 1,
+            b: 0,
+            c: 3,
+            color: '#e74c3c',
+            title: 'D < 0',
+            desc: 'Tidak memotong',
+            label: 'Tidak ada akar real',
+          },
+        ];
+
+        cases.forEach((cs, idx) => {
+          const offX = idx * panelW;
+          const cx = offX + panelW / 2;
+          const cy = H / 2 + 10;
+
+          // garis panel
+          ctx.strokeStyle = '#e6edf4';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(offX + panelW, 0);
+          ctx.lineTo(offX + panelW, H);
+          ctx.stroke();
+
+          // sumbu
+          ctx.strokeStyle = '#b3c5d6';
+          ctx.lineWidth = 1.5;
+          ctx.beginPath();
+          ctx.moveTo(offX + 10, cy);
+          ctx.lineTo(offX + panelW - 10, cy);
+          ctx.stroke();
+          ctx.beginPath();
+          ctx.moveTo(cx, 10);
+          ctx.lineTo(cx, H - 10);
+          ctx.stroke();
+
+          // parabola
+          ctx.beginPath();
+          let started = false;
+          for (let px = 10; px <= panelW - 10; px++) {
+            const mx = (px - panelW / 2) / U3;
+            const my = cs.a * mx * mx + cs.b * mx + cs.c;
+            const py = cy - my * U3;
+            if (py < -20 || py > H + 20) {
+              started = false;
+              continue;
+            }
+            if (!started) {
+              ctx.moveTo(offX + px, py);
+              started = true;
+            } else {
+              ctx.lineTo(offX + px, py);
+            }
+          }
+          ctx.strokeStyle = cs.color;
+          ctx.lineWidth = 2.5;
+          ctx.stroke();
+
+          // Judul
+          ctx.fillStyle = cs.color;
+          ctx.font = 'bold 14px Segoe UI';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'top';
+          ctx.fillText(cs.title, cx, 8);
+
+          // Deskripsi
+          ctx.fillStyle = '#1a3a5a';
+          ctx.font = '10px Segoe UI';
+          ctx.textBaseline = 'bottom';
+          ctx.fillText(cs.label, cx, H - 6);
+        });
+      }
+
+      /* ============================================================
+                  SIMULATOR OPERASI AKAR
+                  ============================================================ */
+      const canvasO = document.getElementById('canvasOperasi');
+      const ctxO = canvasO.getContext('2d');
+      const oaSlider = document.getElementById('oaSlider');
+      const obSlider = document.getElementById('obSlider');
+      const ocSlider = document.getElementById('ocSlider');
+      let oa = 1,
+        ob = -5,
+        oc = 6;
+
+      function updateOperasi() {
+        oa = parseFloat(oaSlider.value);
+        if (oa === 0) oa = 1;
+        ob = parseFloat(obSlider.value);
+        oc = parseFloat(ocSlider.value);
+        document.getElementById('oaLabel').textContent = oa;
+        document.getElementById('obLabel').textContent = ob;
+        document.getElementById('ocLabel').textContent = oc;
+
+        const D = ob * ob - 4 * oa * oc;
+        const sum = -ob / oa;
+        const prod = oc / oa;
+        const diff = D >= 0 ? Math.sqrt(D) / Math.abs(oa) : '—';
+
+        document.getElementById('oD').textContent = round2(D);
+        document.getElementById('oSum').textContent = round2(sum);
+        document.getElementById('oProd').textContent = round2(prod);
+        document.getElementById('oDiff').textContent =
+          typeof diff === 'number' ? round2(diff) : '—';
+
+        // Gambar visualisasi kecil
+        const W = canvasO.width,
+          H = canvasO.height;
+        ctxO.clearRect(0, 0, W, H);
+        ctxO.fillStyle = '#ffffff';
+        ctxO.fillRect(0, 0, W, H);
+
+        // Tampilkan rumus dengan angka
+        ctxO.fillStyle = '#0a2540';
+        ctxO.font = 'bold 15px Segoe UI';
+        ctxO.textAlign = 'left';
+        ctxO.textBaseline = 'top';
+        ctxO.fillText('a = ' + oa + ',  b = ' + ob + ',  c = ' + oc, 16, 12);
+
+        ctxO.font = '13px Consolas, monospace';
+        ctxO.fillStyle = '#2980b9';
+        ctxO.fillText(
+          'x₁ + x₂  =  −b/a  =  −(' + ob + ')/' + oa + '  =  ' + round2(sum),
+          16,
+          44
+        );
+
+        ctxO.fillStyle = '#b8860b';
+        ctxO.fillText(
+          'x₁ · x₂  =   c/a  =   ' + oc + '/' + oa + '  =  ' + round2(prod),
+          16,
+          72
+        );
+
+        ctxO.fillStyle = '#c0392b';
+        if (D >= 0) {
+          ctxO.fillText(
+            '|x₁ − x₂|  =  √D/a  =  √' +
+              round2(D) +
+              '/' +
+              Math.abs(oa) +
+              '  =  ' +
+              round2(Math.sqrt(D) / Math.abs(oa)),
+            16,
+            100
+          );
+        } else {
+          ctxO.fillText('|x₁ − x₂|  =  tidak terdefinisi (D < 0)', 16, 100);
+        }
+
+        // Garis pemisah
+        ctxO.strokeStyle = '#e6edf4';
+        ctxO.lineWidth = 1;
+        ctxO.beginPath();
+        ctxO.moveTo(16, 130);
+        ctxO.lineTo(W - 16, 130);
+        ctxO.stroke();
+
+        ctxO.fillStyle = '#4a6a8a';
+        ctxO.font = '12px Segoe UI';
+        ctxO.fillText(
+          '💡 Jumlah dan hasil kali akar dapat dihitung tanpa mencari akarnya lebih dulu.',
+          16,
+          142
+        );
+      }
+      oaSlider.addEventListener('input', updateOperasi);
+      obSlider.addEventListener('input', updateOperasi);
+      ocSlider.addEventListener('input', updateOperasi);
+
+      /* ============================================================
+                  SOAL AKAR
+                  ============================================================ */
+      function cekSelect({ id, benar, fbId, kategori, soalNo, teksSoal }) {
+        const el = document.getElementById(id);
+        const fb = document.getElementById(fbId);
+        const val = el.value;
+        if (!val) {
+          fb.textContent = 'Pilih dulu jawabannya!';
+          fb.className = 'feedback wrong';
+          return;
+        }
+        const status = val === benar;
+        kirimKeSpreadsheet({
+          tipe: 'RESPON',
+          kategori,
+          soal_no: soalNo,
+          soal: teksSoal,
+          jawaban: val,
+          jawaban_benar: benar,
+          status: status ? 'Benar' : 'Salah',
+        });
+        fb.textContent = status ? '✅ Benar!' : '❌ Belum tepat.';
+        fb.className = status ? 'feedback correct' : 'feedback wrong';
+      }
+
+      function cekAkar1() {
+        cekSelect({
+          id: 'ak1',
+          benar: 'x = 5 atau x = −7',
+          fbId: 'fbAk1',
+          kategori: 'Latihan Akar',
+          soalNo: 1,
+          teksSoal: 'Akar dari x² + 2x − 35 = 0',
+        });
+      }
+      function cekAkar2() {
+        cekSelect({
+          id: 'ak2',
+          benar: 'x = 2 atau x = 4',
+          fbId: 'fbAk2',
+          kategori: 'Latihan Akar',
+          soalNo: 2,
+          teksSoal: 'Akar dari x² − 6x + 8 = 0',
+        });
+      }
+      function cekAkar3() {
+        cekSelect({
+          id: 'ak3',
+          benar: 'x = 4 atau x = −3',
+          fbId: 'fbAk3',
+          kategori: 'Latihan Akar',
+          soalNo: 3,
+          teksSoal: 'Akar dari x² − x − 12 = 0',
+        });
+      }
+
+      /* ============================================================
+                  SOAL DISKRIMINAN & OPERASI
+                  ============================================================ */
+      function cekAngka({
+        id,
+        benar,
+        fbId,
+        kategori,
+        soalNo,
+        teksSoal,
+        tol = 0.01,
+      }) {
+        const el = document.getElementById(id);
+        const fb = document.getElementById(fbId);
+        const val = parseFloat(el.value);
+        if (isNaN(val)) {
+          fb.textContent = 'Isi angkanya dulu!';
+          fb.className = 'feedback wrong';
+          return;
+        }
+        const status = Math.abs(val - benar) < tol;
+        kirimKeSpreadsheet({
+          tipe: 'RESPON',
+          kategori,
+          soal_no: soalNo,
+          soal: teksSoal,
+          jawaban: String(val),
+          jawaban_benar: String(benar),
+          status: status ? 'Benar' : 'Salah',
+        });
+        fb.textContent = status ? '✅ Benar!' : '❌ Belum tepat.';
+        fb.className = status ? 'feedback correct' : 'feedback wrong';
+      }
+
+      function cekD1() {
+        cekAngka({
+          id: 'd1',
+          benar: 0,
+          fbId: 'fbD1',
+          kategori: 'Latihan Diskriminan',
+          soalNo: 1,
+          teksSoal: 'D dari 2x² − 8x + 8 = 0',
+        });
+      }
+      function cekD2() {
+        cekAngka({
+          id: 'd2',
+          benar: 5,
+          fbId: 'fbD2',
+          kategori: 'Latihan Operasi Akar',
+          soalNo: 1,
+          teksSoal: 'x₁ + x₂ dari x² − 5x + 6 = 0',
+        });
+      }
+      function cekD3() {
+        cekAngka({
+          id: 'd3',
+          benar: -3,
+          fbId: 'fbD3',
+          kategori: 'Latihan Operasi Akar',
+          soalNo: 2,
+          teksSoal: 'x₁ · x₂ dari 2x² + 4x − 6 = 0',
+        });
+      }
+
+      /* ============================================================
+                  KUIS 10 SOAL
+                  ============================================================ */
+      const kuisData = [
+        {
+          type: 'mcq',
+          question: 'Bentuk umum persamaan kuadrat dalam variabel x adalah...',
+          options: [
+            'ax + b = 0',
+            'ax² + bx + c = 0, a ≠ 0',
+            'ax³ + bx² + cx + d = 0',
+            'ax + by + c = 0',
+          ],
+          correct: 'ax² + bx + c = 0, a ≠ 0',
+        },
+        {
+          type: 'mcq',
+          question: 'Akar-akar dari x² + 2x − 35 = 0 adalah...',
+          options: [
+            'x = 5 atau x = 7',
+            'x = 5 atau x = −7',
+            'x = −5 atau x = 7',
+            'x = −5 atau x = −7',
+          ],
+          correct: 'x = 5 atau x = −7',
+        },
+        {
+          type: 'mcq',
+          question: 'Akar-akar dari x² − 6x + 8 = 0 adalah...',
+          options: [
+            'x = 2 atau x = 4',
+            'x = −2 atau x = −4',
+            'x = 2 atau x = −4',
+            'x = −2 atau x = 4',
+          ],
+          correct: 'x = 2 atau x = 4',
+        },
+        {
+          type: 'mcq',
+          question: 'Nilai diskriminan dari x² − 4x + 4 = 0 adalah...',
+          options: ['0', '4', '8', '16'],
+          correct: '0',
+        },
+        {
+          type: 'mcq',
+          question: 'Jika D < 0 pada persamaan kuadrat, maka...',
+          options: [
+            'Dua akar real berbeda',
+            'Dua akar real kembar',
+            'Tidak memiliki akar real',
+            'Tidak memiliki akar sama sekali',
+          ],
+          correct: 'Tidak memiliki akar real',
+        },
+        {
+          type: 'mcq',
+          question: 'Jika x₁, x₂ akar dari x² − 5x + 6 = 0, maka x₁ + x₂ = ...',
+          options: ['5', '−5', '6', '−6'],
+          correct: '5',
+        },
+        {
+          type: 'mcq',
+          question:
+            'Jika x₁, x₂ akar dari 2x² + 4x − 6 = 0, maka x₁ · x₂ = ...',
+          options: ['3', '−3', '2', '−2'],
+          correct: '−3',
+        },
+        {
+          type: 'mcq',
+          question: 'Nilai diskriminan dari 2x² − 8x + 8 = 0 adalah...',
+          options: ['0', '8', '32', '64'],
+          correct: '0',
+        },
+        {
+          type: 'mcq',
+          question:
+            'Jika x₁, x₂ akar dari x² − 5x + 6 = 0, maka |x₁ − x₂| = ...',
+          options: ['1', '2', '3', '5'],
+          correct: '1',
+        },
+        {
+          type: 'mcq',
+          question: 'Rumus ABC untuk mencari akar persamaan kuadrat adalah...',
+          options: [
+            'x = (−b ± √(b² − 4ac)) / 2a',
+            'x = (b ± √(b² + 4ac)) / 2a',
+            'x = (−b ± √(b² + 4ac)) / a',
+            'x = (b ± √(b² − 4ac)) / a',
+          ],
+          correct: 'x = (−b ± √(b² − 4ac)) / 2a',
+        },
+      ];
+
+      let kuisIndex = 0;
+      let kuisJawaban = {};
+      let kuisTimerInterval = null;
+      let kuisTimeLeft = 600;
+      let kuisFinished = false;
+
+      function tampilkanViewKuis(id) {
+        document
+          .querySelectorAll('.kuis-view')
+          .forEach((v) => v.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+      }
+      function mulaiTimerKuis() {
+        if (kuisTimerInterval) clearInterval(kuisTimerInterval);
+        kuisTimeLeft = 600;
+        updateTimerKuis();
+        kuisTimerInterval = setInterval(() => {
+          kuisTimeLeft--;
+          updateTimerKuis();
+          if (kuisTimeLeft <= 0) {
+            clearInterval(kuisTimerInterval);
+            kuisTimerInterval = null;
+            selesaikanKuis(true);
+          }
+        }, 1000);
+      }
+      function updateTimerKuis() {
+        const min = Math.floor(kuisTimeLeft / 60);
+        const sec = kuisTimeLeft % 60;
+        const el = document.getElementById('kuisTimer');
+        el.textContent =
+          String(min).padStart(2, '0') + ':' + String(sec).padStart(2, '0');
+        if (kuisTimeLeft <= 60) el.classList.add('warning');
+        else el.classList.remove('warning');
+      }
+      function renderKuisSoal(index) {
+        const soal = kuisData[index];
+        const huruf = ['A', 'B', 'C', 'D', 'E'];
+        let html = '<div class="kuis-soal-card">';
+        html +=
+          '<div class="kuis-nomor">Soal ' +
+          (index + 1) +
+          ' dari ' +
+          kuisData.length +
+          '</div>';
+        html += '<div class="kuis-pertanyaan">' + soal.question + '</div>';
+        if (soal.type === 'mcq') {
+          html += '<div class="kuis-opsi-list">';
+          soal.options.forEach((opt, i) => {
+            const isSel = kuisJawaban[index] === opt;
+            html +=
+              '<label class="kuis-opsi ' +
+              (isSel ? 'selected' : '') +
+              '" onclick="pilihKuisOpsi(' +
+              index +
+              ", '" +
+              opt.replace(/'/g, "\\'") +
+              '\')">' +
+              '<input type="radio" name="kq' +
+              index +
+              '" ' +
+              (isSel ? 'checked' : '') +
+              ' />' +
+              '<span class="huruf">' +
+              huruf[i] +
+              '.</span>' +
+              '<span class="option-text">' +
+              opt +
+              '</span>' +
+              '</label>';
+          });
+          html += '</div>';
+        }
+        html += '</div>';
+        document.getElementById('kuisSoalContainer').innerHTML = html;
+        document.getElementById('kuisProgress').textContent =
+          index + 1 + ' / ' + kuisData.length;
+        document.getElementById('kuisPrev').disabled = index === 0;
+        const btnNext = document.getElementById('kuisNext');
+        if (index === kuisData.length - 1) {
+          btnNext.textContent = '📨 Selesai';
+          btnNext.className = 'kuis-btn kuis-btn-success';
+        } else {
+          btnNext.textContent = 'Selanjutnya ▶';
+          btnNext.className = 'kuis-btn';
+        }
+      }
+      function pilihKuisOpsi(index, value) {
+        kuisJawaban[index] = value;
+        renderKuisSoal(index);
+      }
+      function kuisPrev() {
+        if (kuisIndex > 0) {
+          kuisIndex--;
+          renderKuisSoal(kuisIndex);
+        }
+      }
+      function kuisNext() {
+        if (kuisIndex < kuisData.length - 1) {
+          kuisIndex++;
+          renderKuisSoal(kuisIndex);
+        } else {
+          selesaikanKuis();
+        }
+      }
+      function hitungSkorKuis() {
+        let benar = 0;
+        kuisData.forEach((soal, i) => {
+          if (kuisJawaban[i] === soal.correct) benar++;
+        });
+        return benar;
+      }
+      function selesaikanKuis(force = false) {
+        if (kuisFinished) return;
+        kuisFinished = true;
+        if (kuisTimerInterval) {
+          clearInterval(kuisTimerInterval);
+          kuisTimerInterval = null;
+        }
+        const skor = hitungSkorKuis();
+        const nilai = Math.round((skor / kuisData.length) * 100);
+
+        kuisData.forEach((soal, i) => {
+          const jwb = kuisJawaban[i] || '(kosong)';
+          kirimKeSpreadsheet({
+            tipe: 'RESPON',
+            kategori: 'Kuis Akhir',
+            soal_no: i + 1,
+            soal: soal.question,
+            jawaban: jwb,
+            jawaban_benar: soal.correct,
+            status: jwb === soal.correct ? 'Benar' : 'Salah',
+          });
+        });
+        kirimKeSpreadsheet({
+          tipe: 'HASIL_KUIS',
+          kategori: 'Rekap Kuis',
+          soal_no: '-',
+          soal: 'Total 10 soal',
+          jawaban: skor + '/10 benar',
+          jawaban_benar: '100',
+          status: 'Nilai: ' + nilai,
+          nilai: nilai,
+          skor: skor,
+          total_soal: kuisData.length,
+        });
+
+        tampilkanViewKuis('kuisHasil');
+        document.getElementById('kuisSkorAngka').textContent = nilai;
+        document.getElementById('kuisResultNama').textContent = siswaNama;
+        document.getElementById('kuisResultKelas').textContent = siswaKelas;
+        document.getElementById('kuisResultBenar').textContent = skor;
+        document.getElementById('kuisStatusSend').className =
+          'kuis-status-send success';
+        document.getElementById('kuisStatusSend').textContent =
+          '✅ Jawaban & nilai terkirim ke guru!';
+      }
+      function resetKuisView() {
+        tampilkanViewKuis('kuisSoal');
+        kuisIndex = 0;
+        kuisJawaban = {};
+        kuisFinished = false;
+        renderKuisSoal(0);
+        mulaiTimerKuis();
+      }
+
+      /* ============================================================
+                  INISIALISASI
+                  ============================================================ */
+      updateUmum();
+      drawDiskriminan();
+      updateOperasi();
+      renderKuisSoal(0);
+      mulaiTimerKuis();
+      goToSlide(0);
+    </script>
+  </body>
+</html>
