@@ -1093,7 +1093,7 @@
           <label>Kelas</label>
           <select id="loginKelas" class="login-select">
             <option value="">-- Pilih Kelas --</option>
-                <option value="10.1">10.1</option>
+            <option value="10.1">10.1</option>
             <option value="10.2">10.2</option>
             <option value="10.3">10.3</option>
             <option value="10.4">10.4</option>
@@ -1899,6 +1899,8 @@
               </button>
               <button
                 class="kuis-btn kuis-btn-success"
+                id="kuisSubmit"
+                style="display: none"
                 onclick="selesaikanKuis()"
               >
                 📨 Kirim Jawaban
@@ -2900,6 +2902,13 @@
         } else {
           btnNext.textContent = 'Selanjutnya ▶';
           btnNext.className = 'kuis-btn';
+        }
+
+        // Tampilkan tombol Kirim Jawaban hanya pada soal terakhir (nomor 10)
+        const btnSubmit = document.getElementById('kuisSubmit');
+        if (btnSubmit) {
+          btnSubmit.style.display =
+            index === kuisData.length - 1 ? 'inline-block' : 'none';
         }
       }
       function pilihKuisOpsi(index, value) {
